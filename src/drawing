@@ -1,0 +1,103 @@
+// for the jsx
+/* eslint-disable no-unused-vars */
+// import React, { useRef, useEffect, useState } from 'react';
+// import './App.css';
+
+// const App = () => {
+//   const canvasRef = useRef(null);
+//   const contextRef = useRef(null);
+//   const [isDrawing, setIsDrawing] = useState(false);
+
+//   useEffect(() => {
+//     const canvas = canvasRef.current;
+//     canvas.width = window.innerWidth * 0.8;
+//     canvas.height = window.innerHeight * 0.8;
+//     canvas.style.width = `${window.innerWidth * 0.8}px`;
+//     canvas.style.height = `${window.innerHeight * 0.8}px`;
+
+//     const context = canvas.getContext('2d');
+//     context.scale(1, 1);
+//     context.lineCap = 'round';
+//     context.strokeStyle = 'black';
+//     context.lineWidth = 5;
+//     contextRef.current = context;
+//   }, []);
+
+//   const startDrawing = ({ nativeEvent }) => {
+//     const { offsetX, offsetY } = nativeEvent;
+//     contextRef.current.beginPath();
+//     contextRef.current.moveTo(offsetX, offsetY);
+//     setIsDrawing(true);
+//   };
+
+//   const finishDrawing = () => {
+//     contextRef.current.closePath();
+//     setIsDrawing(false);
+//   };
+
+//   const draw = ({ nativeEvent }) => {
+//     if (!isDrawing) return;
+//     const { offsetX, offsetY } = nativeEvent;
+//     contextRef.current.lineTo(offsetX, offsetY);
+//     contextRef.current.stroke();
+//   };
+
+//   const saveImage = () => {
+//     const canvas = canvasRef.current;
+//     const image = canvas.toDataURL('image/png');
+//     const link = document.createElement('a');
+//     link.href = image;
+//     link.download = 'my-drawing.png';
+//     link.click();
+//   };
+
+//   return (
+//     <div className="App">
+//       <h1>Draw on the Canvas!</h1>
+//       <canvas
+//         ref={canvasRef}
+//         onMouseDown={startDrawing}
+//         onMouseUp={finishDrawing}
+//         onMouseMove={draw}
+//         onMouseLeave={finishDrawing}
+//         className="canvas"
+//       />
+//       <button onClick={saveImage}>Save Drawing</button>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+// for the css
+// .App {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     height: 100vh;
+//     background-color: #f0f0f0;
+//   }
+  
+//   .canvas {
+//     border: 2px solid black;
+//     cursor: crosshair;
+//     background-color: white;
+//   }
+  
+//   button {
+//     margin-top: 20px;
+//     padding: 10px 20px;
+//     font-size: 16px;
+//     cursor: pointer;
+//   }
+  
+
+// king Loui
+// https://x.com/KinglouiEth
+
+// tunez
+// https://x.com/cryptunez
+
+// John W Rich Kid
+// https://x.com/JohnWRichKid

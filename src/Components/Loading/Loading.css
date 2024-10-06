@@ -1,0 +1,48 @@
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100vw;  /* Full viewport width */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    position: fixed; /* Ensure it stays fixed on the screen */
+    top: 0;
+    left: 0;
+    z-index: 9999; /* Ensure it's on top of other content */
+  }
+  
+  .loading-container img {
+    width: 100px; /* Adjust size as needed */
+    height: 100px;
+    animation: spin 1.5s linear infinite; /* Optional: Add a spinning effect */
+  }
+  
+  /* Optional: Spinning animation */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+
+  /* .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; Full height
+  }
+  
+  .loading-container img {
+    width: 100px; 
+    animation: spin 1s linear infinite; 
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  } */
+  

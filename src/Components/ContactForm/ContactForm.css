@@ -1,0 +1,174 @@
+  
+  body {
+    font-family: "Playwrite DE Grund", cursive;
+  }
+  
+  /* Container for the contact form */
+  .contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #9D50BB, #6E48AA); /* Deep purple gradient */
+    padding: 20px;
+  }
+  
+  /* Form Wrapper with glass effect */
+  .form-wrapper {
+    margin-top: 70px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: fadeIn 1s ease-in-out;
+  }
+  .confirmation-message {
+    color: white; /* Green color */
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
+  /* Keyframes for subtle animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Form header */
+  .form-wrapper h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    font-weight: 600;
+  }
+  
+  /* Input field styles */
+  .input-group {
+    margin-bottom: 25px;
+    text-align: left;
+  }
+  
+  .input-group label {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input, .input-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  .input-group input::placeholder, .input-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .input-group input:focus, .input-group textarea:focus {
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Textarea styling */
+  textarea {
+    resize: none;
+  }
+  
+  /* Submit button */
+  .submit-btn {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(75, 0, 130, 0.9); /* Vibrant Purple */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #8A2BE2; /* Lighter purple */
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 600px) {
+    .form-wrapper {
+      padding: 20px;
+    }
+  
+    .form-wrapper h2 {
+      font-size: 2rem;
+    }
+  
+    .submit-btn {
+      font-size: 1rem;
+      padding: 12px;
+    }
+  }
+  @media (max-width: 900px) {
+    .form-wrapper {
+      padding: 30px;
+    }
+  
+    .form-wrapper h2 {
+      font-size: 2rem;
+    }
+  
+    .submit-btn {
+      font-size: 1rem;
+      padding: 12px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .form-wrapper {
+      padding: 20px;
+    }
+  
+    .form-wrapper h2 {
+      font-size: 1.5rem;
+    }
+  
+    .input-group label {
+      font-size: 0.9rem;
+    }
+  
+    .input-group input,
+    .input-group textarea {
+      padding: 12px;
+      font-size: 0.9rem;
+    }
+  
+    .submit-btn {
+      font-size: 0.9rem;
+      padding: 10px;
+    }
+  
+    .confirmation-message {
+      font-size: 1rem;
+    }
+  }
+
+  

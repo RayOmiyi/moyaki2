@@ -1,0 +1,67 @@
+.Monad-container {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+  display: flex; /* Flexbox for centering */
+  flex-direction: column;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.Monad-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  opacity: 0.1; 
+  z-index: -1;
+}
+
+.Monad-overlay {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+}
+
+.Monad-h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Playwrite DE Grund", cursive;
+}
+
+.Monad-h6 {
+  font-family: "Playwrite DE Grund", cursive;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.btn {
+  margin-top: 1.5rem; /* Adds spacing between the text and button */
+}
+
+@media (max-width: 768px) {
+  .Monad-container {
+    height: auto;
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Monad-h3 {
+    font-size: 2rem;
+  }
+
+  .Monad-h6 {
+    font-size: 1rem;
+  }
+
+  .btn {
+    margin-top: 1.5rem;
+  }
+}

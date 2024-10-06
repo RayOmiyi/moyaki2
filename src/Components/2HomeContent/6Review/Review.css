@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+.review-containers {
+    display: flex;
+    flex-direction: column; /* Stack heading and reviews container vertically */
+    align-items: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #6a00f4, #a903b0); 
+    position: relative;
+    margin-top: -1.7rem;
+}
+
+/* Review Heading */
+.reviews-h2 {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Row of reviews - flex to place items in a row */
+.reviews-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow reviews to wrap if screen is smaller */
+    width: 100%; /* Take full width of the container */
+}
+
+/* Single Review Box */
+.review-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, #4e2a84, #7d59c2);
+    padding: 30px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.review-container:hover {
+    transform: translateY(-5px);
+}
+
+/* Image in the Review */
+.review-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    margin-bottom: 20px;
+}
+
+/* Text and Titles */
+.review-text {
+    text-align: center;
+}
+.review-flex {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.review-h3{
+    color: white;
+    padding-left: 10px;
+}
+.review-h4{
+    color: black;
+}
+
+.review-h3,.review-h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: bolder;
+    font-family: "Playfair Display", serif;
+}
+
+.review-h2 {
+    color: white;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .review-container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .review-container {
+        padding: 20px;
+    }
+
+    .review-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .review-h3 {
+        font-size: 1rem;
+    }
+
+    .review-h2 {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,114 @@
+/* General styling for the container */
+.member-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+  clip-path: ellipse(80% 100% at 50% 100%); 
+  background-color: #341c67;
+  padding: 20px;
+  margin-top: -8rem;
+} 
+
+.member-heading {
+  color: aliceblue;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-family: "Playwrite DE Grund", cursive;
+}
+
+/* Flexbox for cards */
+.member-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+}
+
+/* Article for each member card */
+.member-article {
+  background-color: #ffffff;
+  background: linear-gradient(#f8f8f8, #fff);
+  border-radius: 12px; 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 200px; 
+  height: 200px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: center;
+}
+
+/* Hover effect for each card */
+.member-article:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); 
+}
+
+/* Member image styling */
+.member-image {
+  width: 50px; /* Fixed width for the circular image */
+  height: 50px; /* Fixed height for the circular image */
+  object-fit: cover;
+  border-radius: 50%; /* Circular image */
+  border: 3px solid #ddd; /* Optional border for the image */
+  margin-top: 15px; /* Spacing from the top */
+}
+.member-image img{
+  width: 100%;
+  height: 100%;
+}
+
+/* Name styling */
+.member-name {
+  margin: 0.75rem 0;
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+  font-family: "Playwrite DE Grund", cursive;
+}
+
+/* Button styling */
+.btn {
+  background: linear-gradient(90deg, #1e143a 50%, aliceblue 50%);
+  margin-left: 15px;
+  background-size: 200%;
+  background-position: left bottom;
+  border: none; 
+  border-radius: 10px;
+  color: white;
+  height: 40px;
+  text-transform: uppercase;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(10, 10, 10, 0.4);
+  transition: background-position 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background-position: right bottom;
+  color: #1e143a;
+}
+
+@media (max-width: 768px) {
+  .member-container{
+    clip-path: none; 
+    margin-top: -30px;
+    padding: 80px;
+  }
+  .member-article {
+    width: 100%;
+    height: 200px; 
+  }
+
+  .member-heading {
+    font-size: 1.2rem; 
+    margin-bottom: 1.5rem;
+  }
+}

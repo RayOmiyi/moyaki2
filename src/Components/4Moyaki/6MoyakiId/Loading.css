@@ -1,0 +1,33 @@
+/* Loading.css */
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+  }
+  
+  .authur {
+    width: 300px; /* Set the width of the video */
+    height: 300px; /* Set the height of the video */
+    border-radius: 10px;
+    object-fit: cover; /* Make sure the video scales properly */
+    animation: pop-up 0.5s ease forwards; /* Add the animation */
+}
+
+/* Keyframes for the pop-up animation */
+@keyframes pop-up {
+  0% {
+    transform: scale(0.5); /* Start smaller */
+    opacity: 0; /* Start invisible */
+  }
+  100% {
+    transform: scale(1); /* End at normal size */
+    opacity: 1; /* End fully visible */
+  }
+}

@@ -1,0 +1,114 @@
+.Categoryfeed {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: auto;
+  gap: 5px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.Categoryfeed-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 300px;
+  min-height: 300px;
+  position: relative;
+  background-color: #f0f0f0;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.Categoryfeed-card.visible {
+  opacity: 1;
+  transform: translateY(0); /* Make the card visible with animation */
+}
+
+.Categoryfeed-card:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Darken on hover */
+}
+
+/* Ensure images and videos take full space and fit within the card */
+.Categoryfeed-card img,
+.Categoryfeed-video {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 0;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+/* Reduce image/video opacity on hover */
+.Categoryfeed-card:hover img,
+.Categoryfeed-card:hover video {
+  opacity: 0.1;
+}
+
+/* Styling for competition text */
+.Categoryfeed-card p {
+  display: none;
+}
+
+.Categoryfeed-card:hover p {
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* Status image styling */
+.category-status {
+  position: absolute;
+  top: 10px;
+  right: 10px; /* Ensure the status image is positioned correctly */
+  width: 50px;  /* Adjust size as needed */
+  height: 50px;
+  object-fit: contain;
+  z-index: 1;  /* Ensure it stays on top of the other content */
+}
+
+.competition-status {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Adds some space between the text and image */
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 1;
+}
+.category-status-small {
+  width: 20px;  /* Smaller size */
+  height: 20px;
+  object-fit: contain;
+}
+
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .Categoryfeed {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+    gap: 1rem;
+  }
+
+  .Categoryfeed-card {
+    margin-bottom: 1rem;
+  }
+
+  .Categoryfeed-p {
+    font-size: 0.9rem;
+  }
+}
+
+.no-results {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #999;
+  margin-top: 2rem;
+}

@@ -1,0 +1,60 @@
+.certificate-container {
+    position: absolute; /* Position absolute to keep it off-screen */
+    width: 297mm; /* A4 paper size (landscape) */
+    height: 210mm;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    left: -9999px; /* Move it out of the viewport */
+}
+
+.certificate-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    object-fit: contain; /* Ensure the image covers the entire div */
+}
+
+.certificate-content {
+    position: absolute; /* Change to absolute for centering */
+    top: 75%; /* Center vertically */
+    left: 67%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for centering */
+    z-index: 2; /* Ensure content is above background */
+    color: white;
+    padding: 20px; /* Adjust padding as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.certificate-name {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: "Playwrite DE Grund", cursive;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.download-btn {
+    background-color: #4c0865;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.download-btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+   .btn .download-btn{
+        font-size: 0.7rem;        
+    }
+}

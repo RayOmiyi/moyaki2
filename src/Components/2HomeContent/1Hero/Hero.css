@@ -1,0 +1,202 @@
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 60px;
+    overflow: hidden;
+}
+.hero-small{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+    opacity: 0.3;
+}
+
+.home-texts {
+    position: relative;
+    padding: 0 35px;
+}
+
+.home-hero {
+    font-family: "Playwrite DE Grund", cursive;
+    font-size: 60px; /* Default size for larger screens */
+    font-weight: 900;
+    line-height: 70px;
+    text-transform: uppercase;
+    color: aliceblue;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.home-sub {
+    font-weight: 700;
+    font-size: 20px; /* Default size for larger screens */
+    font-family: "Playwrite DE Grund", cursive;
+    color: whitesmoke;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.hero-cards {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.hero-card-background, .hero-card {
+    transition: transform 1s ease, opacity 0.6s ease;
+    transform-style: preserve-3d; 
+}
+
+.hero-card-background {
+    background-size: cover;
+    background-position: center;
+    background-color: #281157;
+    padding: 5px;
+    margin-top: 40px;
+    margin-right: 35px;
+    border-radius: 60px 50px 60px 50px; /* Combined border-radius properties */
+    height: 500px; /* Default height for larger screens */
+    width: 450px; /* Default width for larger screens */
+    transform: rotate(0deg);
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    opacity: 0.6; /* Make it more transparent */
+    transition: background-image 1s ease-in-out; /* Smooth transition for background */
+}
+
+.hero-card {
+    background-color: #291653;
+    padding: 5px;
+    margin-top: 40px;
+    margin-right: 35px;
+    border-radius: 60px 50px 60px 50px; /* Combined border-radius properties */
+    height: 500px; /* Default height for larger screens */
+    width: 450px; /* Default width for larger screens */
+    transform: rotate(-10deg);
+    transition: transform 0.5s ease, opacity 1s ease;
+    position: relative;
+    z-index: 2; /* Ensure the front card is above the background card */
+}
+
+.flipped .hero-card {
+    transform: rotateY(180deg); /* Flip effect */
+}
+  
+.flipped .hero-card-background {
+    transform: rotateY(0deg); /* Reverse flip for background card */
+}
+
+.hero-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 60px 50px 60px 50px; /* Combined border-radius properties */
+}
+
+.hero-btn {
+    background: linear-gradient(90deg, #1e143a 50%, aliceblue 50%);
+    margin-left: 15px;
+    background-size: 200%;
+    background-position: left bottom;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    height: 40px;
+    text-transform: uppercase;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(10, 10, 10, 0.4);
+    transition: background-position 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.hero-btn:hover {
+    transform: scale(1.05);
+    background-position: right bottom;
+    color: #1e143a;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .hero-small{
+        display: grid;
+        align-items: center;
+    }
+    .home-hero {
+        margin-top: 80px;
+        font-size: 30px; /* Reduce font size for medium screens */
+        line-height: 50px; /* Adjust line height */
+    }
+
+    .home-sub {
+        font-size: 15px; /* Reduce font size for medium screens */
+    }
+
+    .hero-card-background,
+    .hero-card {
+        height: 300px; /* Adjust height for medium screens */
+        width: 350px; /* Adjust width for medium screens */
+    }
+
+    .hero-card-background {
+        margin-right: 20px; /* Adjust margins for medium screens */
+    }
+
+    .hero-card {
+        margin-right: 20px; /* Adjust margins for medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .home-hero {
+        font-size: 30px; /* Further reduce font size for small screens */
+        line-height: 40px; /* Adjust line height */
+        padding: 0 15px; /* Adjust padding */
+    }
+
+    .home-sub {
+        font-size: 16px; /* Further reduce font size for small screens */
+    }
+
+    .hero-card-background,
+    .hero-card {
+        height: 300px; /* Further adjust height for small screens */
+        width: 250px; /* Further adjust width for small screens */
+    }
+
+    .hero-card-background {
+        margin-right: 15px; /* Further adjust margins for small screens */
+    }
+
+    .hero-card {
+        margin-right: 15px; /* Further adjust margins for small screens */
+    }
+}

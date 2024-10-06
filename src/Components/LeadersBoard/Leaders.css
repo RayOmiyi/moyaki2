@@ -1,0 +1,135 @@
+/* Container Styling */
+.leader-container {
+  height: 100vh;
+  display: flex;
+  position: relative;
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: center;
+  padding: 40px; 
+  background: linear-gradient(to bottom right, rgba(75, 0, 130, 0.9), rgba(148, 0, 211, 1)); /* Purple gradient */
+  overflow: hidden;
+}
+
+/* Title Styling */
+.leader-title {
+  color: #ffffff;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 28px; /* Increased font size for visibility */
+  margin-bottom: 10px; /* Reduced margin for better spacing */
+  text-align: center;
+  font-weight: bold; /* Bold font for titles */
+}
+
+/* Subtitle for points */
+.leader-points {
+  position: relative;
+  color: #d3d3d3; /* Light gray for points description */
+  font-size: 18px; /* Font size for points */
+  margin-bottom: 30px; /* Space between points and list */
+}
+
+/* List Styling */
+.leader-list {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  width: 100%; /* Full width for the list */
+  max-height: 70vh; /* Limit the height of the list */
+  overflow-y: auto; /* Enable vertical scrolling */
+  background: rgba(0, 0, 0, 0.7); /* More opaque background color for contrast */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+/* Individual Leader Item */
+.leader-item {
+  font-size: 20px; /* Increased font size for readability */
+  padding: 16px; /* Increased padding for better touch area */
+  color: #ffffff; /* White text for better contrast */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Softer bottom border */
+  transition: background-color 0.3s; /* Smooth background transition */
+  display: flex; /* Flexbox for aligning child elements */
+  justify-content: space-between; /* Space between elements */
+  align-items: center; /* Center items vertically */
+}
+
+/* Remove bottom border for the last item */
+.leader-item:last-child {
+  border-bottom: none; /* Remove bottom border for the last item */
+}
+
+/* Hover Effect for List Items */
+.leader-item:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+}
+
+/* Leader rank */
+.leader-rank {
+  font-weight: bold; /* Bold rank for emphasis */
+  color: #FFD700; /* Gold color for the rank */
+}
+
+/* Leader name */
+.leader-name {
+  text-transform: uppercase;
+}
+
+/* Leader medals container */
+.leader-medals {
+  display: flex; /* Flexbox to align medals */
+  gap: 10px; /* Spacing between medals */
+}
+.confetti {
+  max-width: 80%; /* Adjust the width of the confetti if necessary */
+}
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .leader-title {
+    font-size: 24px; /* Slightly smaller font for mobile */
+  }
+
+  .leader-points {
+    font-size: 16px; /* Smaller font for points description */
+  }
+
+  .leader-list {
+    max-height: 60vh; /* Adjust height for mobile */
+  }
+
+  .leader-item {
+    font-size: 18px; /* Smaller font size for items */
+    padding: 12px; /* Reduce padding for mobile */
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to start */
+  }
+
+  .leader-medals {
+    flex-wrap: wrap; /* Allow medals to wrap */
+    justify-content: space-between; /* Space items evenly */
+  }
+
+  .leader-medals span {
+    flex: 1; /* Make each medal take equal space */
+    text-align: center; /* Center text for medals */
+  }
+
+  .total-medals,
+  .total-points {
+    margin-top: 5px; /* Add margin for spacing */
+    text-align: center; /* Center text for mobile */
+  }
+}
+
+/* Further adjustments for very small devices */
+@media (max-width: 480px) {
+  .leader-title {
+    font-size: 20px; /* Even smaller for very small devices */
+  }
+
+  .leader-item {
+    font-size: 16px; /* Smaller font size for items */
+    padding: 8px; /* Less padding for very small devices */
+  }
+}

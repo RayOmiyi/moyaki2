@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+.App {
+  height: 100vh;
+  font-family: "Playwrite DE Grund", cursive;
+}
+body {
+  background: black;
+  /* background: rgb(151, 120, 209); */
+  /* background: #2d185c; */
+}
+a {
+  text-decoration: none; 
+}
+
